@@ -2,6 +2,7 @@
 
 Prerequisite:
 (1) Run "0-Setup.sh".
+
 (2) Restart the Virtual Machine running ubuntu for the changes to take effect.
 
 Modelling steps:
