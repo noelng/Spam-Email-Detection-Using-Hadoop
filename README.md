@@ -6,9 +6,7 @@ Prerequisite:
 
 Modelling steps:
 
-|===============================================|
-|========== Step 1: Data Collection ============|
-|===============================================|
+## Step 1: Data Collection
 
 Run "1-Hive.sh".
 
@@ -25,17 +23,15 @@ Expected output:
         PARQUET --> emails_parquet, emails_5
 
     Physical file output in HDFS:
-        JSON    --> /group-project/stage-1/JSON-TO-CSV/000000_0 (999 rows)
-        XML     --> /group-project/stage-1/XML-TO-CSV/000000_0 (1,000 rows)
-        CSV     --> /group-project/stage-1/CSV-TO-CSV/000000_0 (1,000 rows + 1 header)
-        AVRO    --> /group-project/stage-1/AVRO-TO-CSV/000000_0 (1,000 rows + 1 header)
-        RCFILE  --> /group-project/stage-1/RCFILE-TO-CSV/000000_0 (1,000 rows + 1 header)
-        PARQUET --> /group-project/stage-1/PARQUET-TO-CSV/000000_0 (173 rows + 1 header)
+        JSON    --> /project/stage-1/JSON-TO-CSV/000000_0 (999 rows)
+        XML     --> /project/stage-1/XML-TO-CSV/000000_0 (1,000 rows)
+        CSV     --> /project/stage-1/CSV-TO-CSV/000000_0 (1,000 rows + 1 header)
+        AVRO    --> /project/stage-1/AVRO-TO-CSV/000000_0 (1,000 rows + 1 header)
+        RCFILE  --> /project/stage-1/RCFILE-TO-CSV/000000_0 (1,000 rows + 1 header)
+        PARQUET --> /project/stage-1/PARQUET-TO-CSV/000000_0 (173 rows + 1 header)
         Note: The "000000_0" is actually a CSV file.
 
-|===============================================|
-|========== Step 2: Data Integration ===========|
-|===============================================|
+## Step 2: Data Integration
 
 Run "2-HBase.sh".
 
@@ -46,9 +42,7 @@ Expected output:
         --> 5,173 rows during initial load (5,172 rows + 1 header)
         --> 5,172 rows after removing header
 
-|===============================================|
-|========== Step 3: Data Cleaning ==============|
-|===============================================|
+## Step 3: Data Cleaning
 
 Run "3-Pig.sh".
 
@@ -58,8 +52,6 @@ Expected output:
         /group-project/stage-3/output-sorted/spam/* (1,500 files)
         /group-project/stage-3/output-sorted/ham/* (3,672 files)
 
-|===============================================|
-|========== Step 4: Data Modelling =============|
-|===============================================|
+## Step 4: Data Modelling
 
 Run "4-Mahout.sh".
