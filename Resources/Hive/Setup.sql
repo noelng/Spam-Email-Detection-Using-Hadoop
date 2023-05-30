@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS emails_json;
+DROP TABLE IF EXISTS emails_0;
+
+DROP TABLE IF EXISTS emails_xml;
+DROP TABLE IF EXISTS emails_1;
+
+DROP TABLE IF EXISTS emails_csv;
+DROP TABLE IF EXISTS emails_2;
+
+DROP TABLE IF EXISTS emails_avro;
+DROP TABLE IF EXISTS emails_3;
+
+DROP TABLE IF EXISTS emails_rcfile;
+DROP TABLE IF EXISTS emails_4;
+
+DROP TABLE IF EXISTS emails_parquet;
+DROP TABLE IF EXISTS emails_5;
