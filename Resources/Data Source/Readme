@@ -1,0 +1,20 @@
+(1) Run the Python scripts in "1-Transformation.ipynb".
+    The raw data will be transformed into the following formats.
+
+        '0' --> JSON
+        '1' --> XML
+        '2' --> CSV
+        '3' --> CSV (*To be transformed to AVRO)
+        '4' --> CSV (*To be transformed to RCFILE)
+        '5' --> PARQUET
+
+(2) Run the Hive script "2-TransformationInHive.sh".
+
+(3) Use the following files in the modelling pipeline.
+
+        JSON    : JSON/* (one file = one record)
+        XML     : XML/* (one file = one record)
+        CSV     : CSV/emails-2.csv
+        AVRO    : AVRO/emails-3.avro
+        RCFILE  : RCFILE/emails-4.rcfile
+        PARQUET : PARQUET/emails-5.parquet
